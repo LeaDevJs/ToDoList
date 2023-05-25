@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    display: flex;
+}
+.container-flex{
+    display: flex;
+    margin: 10px;
+    align-items: start;
+    justify-content: start;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+.bgPic{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, hsl(235, 21%, 11%), hsl(235, 21%, 11%)), url(/images/bg-desktop-dark.jpg); /* Ruta a tu imagen */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 60%, 100% 100%; 
+}
+.bgColor{
+    background-color:hsl(235, 21%, 11%) ;
+    height:60% ;
+    width: 100vw;
+}
+
+.card{
+    display: flex; 
+    flex-direction: column;
+    width: 37%;
+    height: 79%;
+    align-items: start;
+    justify-content: start;
+    box-shadow: 0px 0px 16px -6px rgba(0,0,0,0.63);
+}
+.to-do-box{
+    display: flex;
+}
+.to-do-box p{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    letter-spacing: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container-flex{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin: 10px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        align-items: center;
+        justify-content: center;
+        height: 68vh;
+        width: 98vw;
+    }
+}
