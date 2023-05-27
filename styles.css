@@ -24,7 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, hsl(235, 21%, 11%), hsl(235, 21%, 11%)), url(/images/bg-desktop-dark.jpg); /* Ruta a tu imagen */
+    background-image: linear-gradient(to bottom, hsl(235, 21%, 11%), hsl(235, 21%, 11%)), url(images/bg-desktop-dark.jpg); /* Ruta a tu imagen */
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 60%, 100% 100%; 
@@ -209,6 +209,7 @@ input:focus {
     margin-left: 2px;
     display: none;
 }
+.all{display: flex;}
 
 @media (max-width: 768px) {
     .container-flex{
