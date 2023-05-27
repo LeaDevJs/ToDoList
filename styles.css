@@ -97,6 +97,7 @@ body {
     border-radius: 20px;
     margin: 18px;
     opacity: 0.2;
+    cursor: pointer;
 }
 .to-do-row p{
     margin-top: 20px;
@@ -104,10 +105,25 @@ body {
     opacity: 0.4;
     font-weight: 400;
 }
+li{
+    cursor: pointer;
+}
 .create{
     margin-top: 18px;
     margin-bottom: 17px;
 }
+.create input{
+    background-color:hsl(235, 24%, 19%) ;
+    flex-grow: 1;
+    border-width: 0px;
+    color:hsl(236, 33%, 92%)  ;
+}
+input::placeholder{
+    color:rgba(201, 204, 231,0.4) ;
+}
+input:focus {
+    outline: 0px;
+  }
 .options{
     height: 8%;
     display: flex;
@@ -175,9 +191,24 @@ body {
 }
 .task p:hover{
     color:  hsl(236, 33%, 92%);
-    cursor: pointer;
 }
-
+/*Classes for JAVASCRIPT*/
+.ready{
+    text-decoration: line-through;
+    
+}
+.checkBack{
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(0deg, rgba(191,88,243,1) 18%, rgba(86,221,255,1) 42%);
+}
+.check img{
+    height: 8px;
+    width: 10px;
+    place-self: center;
+    margin-left: 2px;
+    display: none;
+}
 
 @media (max-width: 768px) {
     .container-flex{

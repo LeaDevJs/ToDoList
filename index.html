@@ -23,17 +23,17 @@
           <span class="sun"><img src="/images/icon-sun.svg" alt=""></span>
           <span class="moon"><img src="/images/icon-moon.svg" alt=""></span>
         </div>
-        <div class="to-do-row create">
+        <div class="to-do-row create" onclick="handleCheck()">
             <div class="check"></div>
-            <p>Create a new todo...</p>
+            <input type="text" placeholder="Create a new todo..."></input>
         </div>
         <ul class="to-dos">
-          <li class="to-do-row task"><div class="check"></div><p>Complete online Javascript course</p></li>
-          <li class="to-do-row task"><div class="check"></div><p> Jog around the park 3x</p></li>
-          <li class="to-do-row task"><div class="check"></div><p> 10 minutes meditation</p></li>
-          <li class="to-do-row task"><div class="check"></div><p> Read for 1 hour</p></li>
-          <li class="to-do-row task"><div class="check"></div><p> Pick up groceries</p></li>
-          <li class="to-do-row task"><div class="check"></div><p> Complete Todo App on Frontend Mentor</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p>Complete online Javascript course</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Jog around the park 3x</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> 10 minutes meditation</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Read for 1 hour</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Pick up groceries</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Complete Todo App on Frontend Mentor</p></li>
         </ul>
         <div class="to-do-row options">
           <p class="cantItems">num items left</p> <nav><p>All</p><p>Active</p><p>Completed</p></nav> <div class="clear"><p> Clear completed</p></div>
