@@ -17,35 +17,35 @@
 <body>
 
   <div class="container-flex">
-    <div class="bgPic">
+    <div class="bgPic" id="bgPic">
       <div class="card">
         <div class="to-do-box"><p>TODO</p>
-          <span class="sun"><img src="images/icon-sun.svg" alt=""></span>
-          <span class="moon"><img src="images/icon-moon.svg" alt=""></span>
+          <span id="sun" class="sun"><img onclick="handleChangeTheme()" src="images/icon-sun.svg" alt=""></span>
+          <span id="moon" class="moon"><img onclick="handleChangeTheme()" src="images/icon-moon.svg" alt=""></span>
         </div>
-        <div class="to-do-row create">
+        <div class="to-do-row create" id="to-do-row">
             <div class="check" onclick="handleAdd()"></div>
             <input onkeydown="handleKeyDown(event)" id="input" type="text" placeholder="Create a new todo..."></input>
         </div>
         <ul id="list" class="to-dos">
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p>Complete online Javascript course</p></li>
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Jog around the park 3x</p></li>
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> 10 minutes meditation</p></li>
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Read for 1 hour</p></li>
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Pick up groceries</p></li>
-          <li class="to-do-row task all" onclick="handleCheck(event)"><div class="check"><img src="/images/icon-check.svg" alt=""></div><p> Complete Todo App on Frontend Mentor</p></li>
+          <li id="to-do-row" class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p>Complete online Javascript course</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Jog around the park 3x</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> 10 minutes meditation</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Read for 1 hour</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Pick up groceries</p></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Complete Todo App on Frontend Mentor</p></li>
         </ul>
         <div class="to-do-row options">
-          <p id="cantItems" class="cantItems"></p> <nav><p onclick="handleAll()">All</p><p onclick="handleActive()">Active</p><p onclick="handleCompleted()">Completed</p></nav> <div class="clear"><p onclick="handleDelete()"> Clear completed</p></div>
+          <p id="cantItems" class="cantItems"></p> <nav><p id="all" onclick="handleAll()">All</p><p id="active" onclick="handleActive()">Active</p><p id="completed" onclick="handleCompleted()">Completed</p></nav> <div class="clear"><p onclick="handleDelete()"> Clear completed</p></div>
         </div>
+
       </div>
-      
-  </div>
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/LeaDevJs">Leandro Zapata</a>.
   </div>
-    
+</div> 
 </div>
   
   
