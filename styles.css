@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-size: 13px;
     display: flex;
+    background-color:hsl(235, 21%, 11%) ;
 }
 .container-flex{
     display: flex;
@@ -107,6 +108,9 @@ body {
     border-radius: 3px;
     margin: 0;
 }
+.to-do-row-light .check{
+    opacity: 0.8 !important;
+}
 .to-do-row .check{
     display: flex;
     height: 15px;
@@ -143,6 +147,11 @@ li{
 input::placeholder{
     color:rgba(201, 204, 231,0.4) ;
 }
+.changePlaceholder::placeholder{
+    color: hsl(236, 9%, 61%) ;
+     font-weight: 700 ; 
+     opacity: 0.7;
+}
 input:focus {
     outline: 0px;
   }
@@ -153,6 +162,11 @@ input:focus {
 .options p{
     margin: 5px;
     font-size: 11px;
+}
+.optionsLight p{
+    color: hsl(236, 9%, 61%) ;
+    font-weight: 700 ; 
+    opacity: 0.7;
 }
 .options .cantItems{
     margin-left: 15px;
@@ -215,7 +229,10 @@ input:focus {
 .task p:hover{
     color:  hsl(236, 33%, 92%);
 }
-/*Classes for JAVASCRIPT*/
+.changeColor:hover{
+    opacity: 0.5;
+}
+
 .ready{
     text-decoration: line-through;
 }

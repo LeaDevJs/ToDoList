@@ -6,6 +6,8 @@ const completed=document.getElementById("completed");
 const bgPic=document.getElementById("bgPic");
 const sun=document.getElementById("sun");
 const moon=document.getElementById("moon");
+const options=document.getElementById("options");
+const body=document.querySelector("body");
 let cantElements=list.children.length;
 function long(){
     cantItems.textContent=cantElements + " items left"
@@ -34,6 +36,33 @@ function handleCheck(e){
 }
 function handleAdd(){
     if (input.value!==""){
+        if (bgPic.classList.contains("bgPicLight")){
+            cantElements+=1
+        let input= document.getElementById("input");
+        let li=document.createElement("li");
+        li.classList.add("to-do-row");
+        li.classList.add("to-do-row-light");
+        li.classList.add("task");
+        
+        let check=document.createElement("div");
+        check.classList.add("check");
+
+        let img=document.createElement("img");
+        img.setAttribute("src", "images/icon-check.svg");
+
+        let paragraph=document.createElement("p");
+        paragraph.classList.add("changeColor");
+        paragraph.textContent=input.value;
+        input.value="";
+        check.appendChild(img);
+        li.appendChild(check);
+        li.appendChild(paragraph);
+        li.onclick=handleCheck;
+        list.appendChild(li);
+        long();
+
+        }else{
+
         cantElements+=1
         let input= document.getElementById("input");
         let li=document.createElement("li");
@@ -55,6 +84,7 @@ function handleAdd(){
         li.onclick=handleCheck;
         list.appendChild(li);
         long();
+        }
     }
 }
 function handleKeyDown(e){
@@ -132,6 +162,10 @@ function handleChangeTheme(){
     sun.style.display="none";
     moon.style.display="flex";
     input.style.backgroundColor="hsl(0, 0%, 98%)";
+    input.classList.add("changePlaceholder");
+    input.style.color="black";
+    options.classList.add("optionsLight");
+    body.style.backgroundColor="hsl(236, 33%, 92%)";
     for(let i=0;i<toDoRows.length; i++){
         toDoRows[i].classList.add("to-do-row-light");
         
@@ -146,6 +180,10 @@ function handleChangeTheme(){
         sun.style.display="flex";
         moon.style.display="none";
         input.style.backgroundColor="hsl(235, 24%, 19%)";
+        input.classList.remove("changePlaceholder");
+        input.style.color="white";
+        options.classList.remove("optionsLight");
+        body.style.backgroundColor="hsl(235, 21%, 11%)";
         for(let i=0;i<toDoRows.length; i++){
             toDoRows[i].classList.remove("to-do-row-light");
         }
