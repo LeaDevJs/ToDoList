@@ -8,7 +8,13 @@ const sun=document.getElementById("sun");
 const moon=document.getElementById("moon");
 const options=document.getElementById("options");
 const body=document.querySelector("body");
+const card=document.getElementById("card");
+let heightCard = card.offsetHeight;
 let cantElements=list.children.length;
+$(document).ready(function() {
+    $("#list").sortable();
+  });
+  
 function long(){
     cantItems.textContent=cantElements + " items left"
 }
@@ -50,6 +56,10 @@ function handleAdd(){
         let img=document.createElement("img");
         img.setAttribute("src", "images/icon-check.svg");
 
+        let imgQuit=document.createElement("img");
+        imgQuit.classList.add("cross");
+        imgQuit.setAttribute("src", "images/icon-cross.svg");    
+
         let paragraph=document.createElement("p");
         paragraph.classList.add("changeColor");
         paragraph.textContent=input.value;
@@ -57,9 +67,12 @@ function handleAdd(){
         check.appendChild(img);
         li.appendChild(check);
         li.appendChild(paragraph);
+        li.appendChild(imgQuit);
         li.onclick=handleCheck;
         list.appendChild(li);
         long();
+        heightCard=heightCard+((heightCard*11)/100);
+        card.style.height=`${heightCard}`;
 
         }else{
 
@@ -75,15 +88,22 @@ function handleAdd(){
         let img=document.createElement("img");
         img.setAttribute("src", "images/icon-check.svg");
 
+        let imgQuit=document.createElement("img");
+        imgQuit.classList.add("cross");
+        imgQuit.setAttribute("src", "images/icon-cross.svg");  
+
         let paragraph=document.createElement("p");
         paragraph.textContent=input.value;
         input.value="";
         check.appendChild(img);
         li.appendChild(check);
         li.appendChild(paragraph);
+        li.appendChild(imgQuit);
         li.onclick=handleCheck;
         list.appendChild(li);
         long();
+        heightCard=heightCard+((heightCard*11)/100);
+        card.style.height=`${heightCard}`;
         }
     }
 }
@@ -193,3 +213,11 @@ function handleChangeTheme(){
         }
     }
 }
+//delete element with JQuery 
+$(document).ready(function() {
+    $("#list li .cross").on("click", function() {
+      var $li = $(this).closest("li"); 
+      $li.remove();
+    });
+  });
+  

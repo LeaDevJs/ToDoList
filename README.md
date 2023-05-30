@@ -1,2 +1,1 @@
--hay que hacer que los elementos se puedan arrastrar
--hacer mediaQuerys.
+ToDoList by Leandro Zapata for Frontend Mentor.

@@ -10,15 +10,19 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center;
-    margin-top: 10px; }
+    margin-top: 20px; color: gray; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
 </head>
 <body>
 
   <div class="container-flex">
     <div class="bgPic" id="bgPic">
-      <div class="card">
+      <div class="card" id="card">
         <div class="to-do-box"><p>TODO</p>
           <span id="sun" class="sun"><img onclick="handleChangeTheme()" src="images/icon-sun.svg" alt=""></span>
           <span id="moon" class="moon"><img onclick="handleChangeTheme()" src="images/icon-moon.svg" alt=""></span>
@@ -28,23 +32,23 @@
             <input onkeydown="handleKeyDown(event)" id="input" type="text" placeholder="Create a new todo..."></input>
         </div>
         <ul id="list" class="to-dos">
-          <li id="to-do-row" class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p>Complete online Javascript course</p></li>
-          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Jog around the park 3x</p></li>
-          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> 10 minutes meditation</p></li>
-          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Read for 1 hour</p></li>
-          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Pick up groceries</p></li>
-          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Complete Todo App on Frontend Mentor</p></li>
+          <li id="to-do-row" class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p>Complete online Javascript course</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Jog around the park 3x</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> 10 minutes meditation</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Read for 1 hour</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Pick up groceries</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
+          <li class="to-do-row task" onclick="handleCheck(event)"><div class="check"><img src="images/icon-check.svg" alt=""></div><p> Complete Todo App on Frontend Mentor</p><img class="cross" src="images/icon-cross.svg" alt=""></li>
         </ul>
         <div id="options" class="to-do-row options">
           <p id="cantItems" class="cantItems"></p> <nav><p id="all" onclick="handleAll()">All</p><p id="active" onclick="handleActive()">Active</p><p id="completed" onclick="handleCompleted()">Completed</p></nav> <div class="clear"><p onclick="handleDelete()"> Clear completed</p></div>
         </div>
-
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/LeaDevJs">Leandro Zapata</a>.
+        </div>
       </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/LeaDevJs">Leandro Zapata</a>.
-  </div>
+  
 </div> 
 </div>
   

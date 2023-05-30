@@ -127,6 +127,14 @@ body {
     opacity: 0.4;
     font-weight: 400;
 }
+.to-do-row .cross{
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
 .changeColor{
      color: hsl(236, 9%, 61%) !important;
      font-weight: 700 !important; 
@@ -156,7 +164,7 @@ input:focus {
     outline: 0px;
   }
 .options{
-    height: 8%;
+    height: 8% ;
     display: flex;
 }
 .options p{
@@ -199,8 +207,6 @@ input:focus {
     opacity: 1;
 }
 .to-dos{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     list-style-type: none;
     margin: 0;
     margin-block-end: 0;
@@ -253,7 +259,7 @@ input:focus {
         display: flex;
         align-items: center;
         justify-content: start;
-        margin: 10px;
+        margin: 0;
     }
     .card{
         display: flex;
@@ -263,5 +269,8 @@ input:focus {
         justify-content: center;
         height: 68vh;
         width: 98vw;
+    }
+    .to-do-row .cross{
+        display: flex;
     }
 }
